@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
+import {provide, Component,PLATFORM_DIRECTIVES, PLATFORM_PIPES} from '@angular/core';
 import {Platform, ionicBootstrap} from 'ionic-angular';
 import {TabsPage} from './pages/tabs/tabs';
-import {TranslateService, TranslateLoader, TranslateStaticLoader} from 'ng2-translate/ng2-translate';
+import {TranslatePipe, TranslateService, TranslateLoader, TranslateStaticLoader} from 'ng2-translate/ng2-translate';
 import {Http} from '@angular/http';
 
 @Component({
@@ -12,7 +12,7 @@ import {Http} from '@angular/http';
       useFactory: (http: Http) => new TranslateStaticLoader(http, 'assets/i18n', '.json'),
       deps: [Http]
     },
-    TranslateService,
+    TranslateService
   ]
 })
 export class MyApp {
@@ -33,4 +33,6 @@ export class MyApp {
   }
 }
 
-ionicBootstrap(MyApp);
+ionicBootstrap(MyApp,
+[provide(PLATFORM_PIPES, { useValue: [TranslatePipe], multi: true })]
+);
