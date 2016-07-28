@@ -1,6 +1,6 @@
 # Ionic2-ng2-translate
 
-Implementing localization of strings with [Ng2-Translate](https://github.com/ocombe/ng2-translate) and [Ionic 2](http://ionicframework.com/docs/v2/). This is using PLATFORM_PIPES to provide translation to all .html files without modifying .ts files.
+Implementing localization of strings with [Ng2-Translate](https://github.com/ocombe/ng2-translate) and [Ionic 2](http://ionicframework.com/docs/v2/).</p> This is using PLATFORM_PIPES to provide translation to all .html files without modifying .ts files.
 
 # Initialization
 
