@@ -1,5 +1,6 @@
 # Ionic2-ng2-translate
-Implementing localization of string with Ng2-Translate and Ionic 2
+
+Implementing localization of strings with Ng2-Translate and Ionic 2
 
 # Initialization
 
