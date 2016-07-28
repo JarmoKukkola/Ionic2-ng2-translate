@@ -1,6 +1,6 @@
 # Ionic2-ng2-translate
 
-Implementing localization of strings with [Ng2-Translate](https://github.com/ocombe/ng2-translate) and [Ionic 2](http://ionicframework.com/docs/v2/)
+Implementing localization of strings with [Ng2-Translate](https://github.com/ocombe/ng2-translate) and [Ionic 2](http://ionicframework.com/docs/v2/). This is using PLATFORM_PIPES to provide translation to all .html files without modifying .ts files.
 
 # Initialization
 
@@ -23,4 +23,10 @@ Run in browser
 
 ```Batchfile
 ionic serve
+```
+
+Usage (hello is a keyword in www/assets/i18n/*.json file)
+
+```Html
+<h2>{{"hello"|translate}}</h2> 
 ```
