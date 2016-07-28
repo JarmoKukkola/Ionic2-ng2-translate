@@ -1,9 +1,8 @@
 import {Component} from '@angular/core';
 import {Platform, ionicBootstrap} from 'ionic-angular';
-import {StatusBar} from 'ionic-native';
 import {TabsPage} from './pages/tabs/tabs';
-import {TRANSLATE_PROVIDERS,TranslatePipe, TranslateService, TranslateLoader, TranslateStaticLoader} from 'ng2-translate/ng2-translate';
-import {Http,HTTP_PROVIDERS} from '@angular/http';
+import {TranslateService, TranslateLoader, TranslateStaticLoader} from 'ng2-translate/ng2-translate';
+import {Http} from '@angular/http';
 
 @Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
@@ -23,10 +22,6 @@ export class MyApp {
   constructor(private platform: Platform,
     public translate: TranslateService) {
     this.rootPage = TabsPage;
-
-    platform.ready().then(() => {
-      StatusBar.styleDefault();
-    });
     this.translateConfig();
   }
 
@@ -36,7 +31,6 @@ export class MyApp {
     this.translate.setDefaultLang('en');
     this.translate.use(userLang);
   }
-
 }
 
-ionicBootstrap(MyApp,[HTTP_PROVIDERS, TRANSLATE_PROVIDERS]);
+ionicBootstrap(MyApp);
